@@ -1,0 +1,108 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+/* Style the form and its elements */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Input fields styling */
+input[type="text"],
+select,
+input[type="date"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]::placeholder,
+select {
+    color: lightgray;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #6a1b9a;
+    outline: none;
+}
+
+/* Dropdown section styling */
+select {
+    appearance: none;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="gray" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-color: #f8f8f8;
+    padding-right: 30px;
+}
+
+/* Calendar section styling with smooth transition */
+/* Calendar Section Visibility Toggle */
+#calendar-section {
+    opacity: 0;
+    display: none; /* Initially hidden */
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+#calendar-section.show {
+    opacity: 1;
+    display: block; /* Visible when .show class is added */
+    transform: translateY(0);
+}
+
+
+#calendar-section label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="date"] {
+    background-color: #f8f8f8;
+}
+
+
+/* Price display styling */
+.price-display {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #5a1180;
+}
